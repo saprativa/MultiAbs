@@ -2,6 +2,7 @@ from transformers.models.bart import BartTokenizer, BartForConditionalGeneration
 from transformers.models.bart.modeling_bart import *
 import transformers.models.bart.modeling_bart as m_bart
 import torch
+import torch.nn.functional as F
 
 # class BartForMultiSum(PretrainedBartModel):
 #     base_model_prefix = "model"
