@@ -1,0 +1,15 @@
+python run_summarization.py \
+	--model_name_or_path ./output_ami2/checkpoint-0 \
+	--do_predict \
+	--train_file ../data/ami/train.csv 	\
+	--validation_file ../data/ami/val.csv \
+	--test_file ../data/ami/test.csv \
+	--output_dir ./test2/Prediction_best \
+	--overwrite_output_dir \
+	--per_device_train_batch_size=2 \
+	--per_device_eval_batch_size=2 \
+	--predict_with_generate \
+	--num_train_epochs 3 \
+	--save_strategy epoch \
+	--seed 777 \
+	--num_gpus 3
