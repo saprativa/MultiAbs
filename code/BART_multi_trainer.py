@@ -49,9 +49,11 @@ from transformers.integrations import (  # isort: split
     is_ray_tune_available,
     run_hp_search_optuna,
     run_hp_search_ray,
-    deepspeed_init,
-    is_deepspeed_zero3_enabled,
+    # deepspeed_init,
+    # is_deepspeed_zero3_enabled,
 )
+
+from transformers.deepspeed import deepspeed_init, is_deepspeed_zero3_enabled
 
 import numpy as np
 import torch
