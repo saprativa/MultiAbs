@@ -12,8 +12,8 @@
               "host": "localhost",
               "port": 5678
             },
-            "console": "integratedTerminal",
             "stopOnEntry": true,
+            "console": "integratedTerminal",
             "justMyCode": true
         },
         {
