@@ -1,5 +1,5 @@
 CUDA_VISIBLE_DEVICES=1,2,3,4 \
-    python -m debugpy --listen 5678 --wait-for-client \
+    python -m debugpy --listen 5680 --wait-for-client \
     run_summarization.py \
 	--model_name_or_path sshleifer/distilbart-cnn-6-6 \
 	--do_train \
@@ -23,7 +23,7 @@ CUDA_VISIBLE_DEVICES=1,2,3,4 \
 
 
 CUDA_VISIBLE_DEVICES=1,2,3 \
-    python -m debugpy --listen 5678 --wait-for-client \
+    python -m debugpy --listen 5680 --wait-for-client \
     run_summarization.py \
     --model_name_or_path sshleifer/distilbart-cnn-6-6 \
     --do_train \
