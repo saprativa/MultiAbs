@@ -44,6 +44,10 @@ with open("/tmp/sb-summarization1/generated_predictions.txt", 'r') as f:
     all_hypothesis = f.readlines()
 all_hypothesis = [process(pred.strip()) for pred in all_hypothesis]
 
+# with open("code/iitp.json", 'r') as f:
+#     all_hypothesis = json.load(f)
+#     all_hypothesis = [process(d["summary"]) for d in all_hypothesis]
+
 scores = evaluator.get_scores(all_hypothesis, all_references)
 for metric, results in sorted(scores.items(), key=lambda x: x[0]):
     if not apply_avg and not apply_best: # value is a type of list as we evaluate each summary vs each reference
