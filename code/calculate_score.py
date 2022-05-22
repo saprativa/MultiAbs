@@ -39,12 +39,13 @@ all_hypothesis, all_references = [], []
 for d in golds:
     all_references.append([process(d[f"summary{i}"]) for i in range(1, 4)])
 
-
-with open("/tmp/sb-summarization1/generated_predictions.txt", 'r') as f:
+# for text files
+with open("/home/tanik_1821cs08/kartik/MultiAbs/generated_predictions_as_nd_topic.txt", 'r') as f:
     all_hypothesis = f.readlines()
 all_hypothesis = [process(pred.strip()) for pred in all_hypothesis]
 
-# with open("code/iitp.json", 'r') as f:
+# for json
+# with open("/home/tanik_1821cs08/sb/MultiAbs/data/output/iitp.json", 'r') as f:
 #     all_hypothesis = json.load(f)
 #     all_hypothesis = [process(d["summary"]) for d in all_hypothesis]
 
